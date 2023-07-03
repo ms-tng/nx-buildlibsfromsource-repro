@@ -1,0 +1,13 @@
+diff --git a/node_modules/@nx/vite/src/utils/executor-utils.js b/node_modules/@nx/vite/src/utils/executor-utils.js
+index b927290..5f63f2f 100644
+--- a/node_modules/@nx/vite/src/utils/executor-utils.js
++++ b/node_modules/@nx/vite/src/utils/executor-utils.js
+@@ -34,7 +34,7 @@ function registerPaths(projectRoot, options, context) {
+     var _buildLibsFromSource;
+     (_buildLibsFromSource = (_options = options).buildLibsFromSource) != null ? _buildLibsFromSource : _options.buildLibsFromSource = true;
+     if (!options.buildLibsFromSource) {
+-        const { dependencies  } = (0, _buildablelibsutils.calculateProjectDependencies)(context.projectGraph, context.root, context.projectName, context.targetName, context.configurationName);
++        const { dependencies  } = (0, _buildablelibsutils.calculateProjectDependencies)(context.projectGraph, context.root, context.projectName, 'build', context.configurationName);
+         const tmpTsConfig = (0, _buildablelibsutils.createTmpTsConfig)(tsConfig, context.root, projectRoot, dependencies);
+         (0, _internal.registerTsConfigPaths)(tmpTsConfig);
+     } else {
